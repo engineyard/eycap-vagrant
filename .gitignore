@@ -1,0 +1,8 @@
+.vagrant
+log/*.log
+tmp/**/*
+/db/*.sqlite3
+/public/system
+config/initializers/secret_token.rb
+/.bundle
+/vendor/bundle
