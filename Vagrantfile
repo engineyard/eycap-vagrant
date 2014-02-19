@@ -16,10 +16,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
-  # Chef provisioning
+  # Install curl
+  config.vm.provision "shell", inline: "sudo apt-get install curl -y"
 
+  # Install ruby 2.1.0
+  config.vm.provision "shell", inline: "curl -L https://gist.github.com/7hunderbird/60d984cd922c5a379d3f/raw/0ea7140addceb2a86508add122d8678cdf387e78/vagrant-bootstrap.sh | bash"
+
+  # Install bundler
+  config.vm.provision "shell", inline: "gem install bundler --no-ri --no-rdoc"
+
+  # Chef provisioning
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./cookbooks"
     chef.add_recipe "main"
   end
+
 end

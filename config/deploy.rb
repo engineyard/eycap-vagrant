@@ -8,13 +8,15 @@ set :application, "awesome"
 
 set :scm, :git
 set :repository, "git@github.com:engineyard/eycap-vagrant.git"
+set :branch, "master"
 
+default_run_options[:pty] = true
 ssh_options[:port] = 2222
 ssh_options[:keys] = "~/.vagrant.d/insecure_private_key"
 
 set :user, "vagrant"
 set :group, "vagrant"
-set :deploy_to, "/var/awesome"
+set :deploy_to, "/home/#{user}/apps/#{application}"
 set :use_sudo, false
 
 set :deploy_via, :copy
@@ -32,9 +34,8 @@ namespace :deploy do
     run "cp #{shared_path}/config/database.yml #{latest_release}/config/"
   end  
 end
-before "deploy:assets:precompile", "deploy:copy_in_database_yml"
 
-before :deploy, "deploy:confirm"
+before "deploy:assets:precompile", "deploy:copy_in_database_yml"
 
 set :cleanup_targets, %w(log public/system tmp) 
 set :release_directories, %w(log tmp)
@@ -63,3 +64,5 @@ namespace :deploy do
     run "cd #{current_path} && #{symlink_command.join(' && ')}"
   end
 end
+
+after "deploy", "deploy:cleanup"
