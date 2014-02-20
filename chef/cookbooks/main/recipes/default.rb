@@ -1,1 +1,1 @@
-package "git-core"
+gem_package "bundler"

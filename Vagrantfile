@@ -28,9 +28,23 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.provision "shell", inline: "wget -q -O - https://gist.github.com/7hunderbird/60d984cd922c5a379d3f/raw | bash"
 
   # Chef provisioning
-  #config.vm.provision :chef_solo do |chef|
-  #  chef.cookbooks_path = "chef/cookbooks"
-  #  chef.add_recipe "main"
-  #end
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = "chef/cookbooks"
+    chef.add_recipe "build-essential"
+    chef.add_recipe "git"
+
+#    chef.add_recipe "apt"
+#    chef.add_recipe "bluepill"
+    chef.add_recipe "monit_bin"
+#    chef.add_recipe "mysql"
+    chef.add_recipe "nginx"
+#    chef.add_recipe "ohai"
+    chef.add_recipe "openssl"
+#    chef.add_recipe "ruby_build"
+#    chef.add_recipe "runit"
+#    chef.add_recipe "rsyslog"
+#    chef.add_recipe "yum"
+    chef.add_recipe "main"
+  end
 
 end
