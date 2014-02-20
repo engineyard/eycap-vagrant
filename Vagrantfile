@@ -16,7 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
-
   # Go faster stripes
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--memory", 2048]
@@ -34,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Chef provisioning
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "./cookbooks"
+    chef.cookbooks_path = "chef/cookbooks"
     chef.add_recipe "main"
   end
 
