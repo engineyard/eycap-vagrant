@@ -32,7 +32,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = "chef/cookbooks"
     chef.add_recipe "build-essential"
     chef.add_recipe "git"
-
 #    chef.add_recipe "apt"
 #    chef.add_recipe "bluepill"
     chef.add_recipe "monit_bin"
