@@ -1,0 +1,7 @@
+DEPENDENCIES
+  build-essential
+    git: git://github.com/opscode-cookbooks/build-essential.git
+    revision: 2e3317196f69305a44fcf048045c53d9a387e4d0
+
+GRAPH
+  build-essential (2.0.6)
