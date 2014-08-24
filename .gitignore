@@ -1,4 +1,9 @@
+## Do not store local vagrant files
+
 .vagrant
+
+## Rails app ignores
+
 log/*.log
 tmp/**/*
 /db/*.sqlite3
