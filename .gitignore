@@ -1,9 +1,15 @@
 ## Do not store local vagrant files
-
+#
 .vagrant
 
-## Rails app ignores
+## Ignore for chef
+#
+data_bags/users/deploy.json
+data_bags/users/vagrant.json
+nodes/127.0.0.1.json
 
+## Rails app ignores
+#
 log/*.log
 tmp/**/*
 /db/*.sqlite3
