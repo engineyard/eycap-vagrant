@@ -59,6 +59,20 @@ The ssh_keys goes in a double quoted string: ``""``.
 
 Run ``vagrant ssh-config`` to grab the path to your ``IdentityFile``.  We'll use that in our next steps.
 
+```bash
+$ vagrant ssh-config
+Host default
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Volumes/threeterrabyte/vagrant/home/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+```
+
 To prepare chef we run the following:
 
 ```bash
