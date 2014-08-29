@@ -4,9 +4,11 @@ Welcome to the ``eycap-vagrant`` project.  Vagrant helps to make many things pos
 
 ## Requriements
 
-[Download Vagrant](http://www.vagrantup.com/downloads.html)
+Please download and run the following installers for your specific operating system:
 
-[Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Vagrant](http://www.vagrantup.com/downloads.html)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Chef DK](http://downloads.getchef.com/chef-dk/)
 
 ### Check out the repo
 
