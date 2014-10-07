@@ -16,11 +16,23 @@ Please download and run the following installers for your specific operating sys
 
 Run ``bundle install`` to install the gems you'll need.
 
+```
+bundle install
+```
+
 Then run ``berks install`` to install the cookbooks you'll need.
+
+```
+berks install
+```
 
 ### Start the virtual server
 
 Use ``vagrant up`` to start the virtual server.
+
+```
+vagrant up
+```
 
 
 ### Set up the deploy and vagrant users
@@ -53,6 +65,18 @@ You'll need to add the information in the ``deploy.json`` and ``vagrant.json`` f
   "groups": [ "sysadmin"],
   "shell": "\/bin\/bash"
 }
+```
+
+Generate a password with this command, replacing `plaintextpassword` with your password:
+
+```
+openssl passwd -1 "plaintextpassword"
+```
+
+Then put your password in the JSON attribute for password:
+
+```
+"password": "",
 ```
 
 The ssh_keys goes in a double quoted string: ``""``.
