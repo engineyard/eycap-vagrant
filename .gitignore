@@ -7,6 +7,7 @@
 data_bags/users/deploy.json
 data_bags/users/vagrant.json
 nodes/127.0.0.1.json
+cookbooks/*
 
 ## Rails app ignores
 #

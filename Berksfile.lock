@@ -2,6 +2,84 @@ DEPENDENCIES
   build-essential
     git: git://github.com/opscode-cookbooks/build-essential.git
     revision: 2e3317196f69305a44fcf048045c53d9a387e4d0
+  chef-solo-search
+    git: git://github.com/edelight/chef-solo-search.git
+    revision: 848fad1461c78fd502975f1df2e14eed12610635
+  eycap-basic_security
+    git: git://github.com/engineyard/eycap-basic_security.git
+    revision: f0b184a33303c9792d1ff09cbd36a821d90f6860
+  eycap-look_and_feel
+    git: git://github.com/engineyard/eycap-look_and_feel.git
+    revision: 0cc88ac6cd62d3075d6d4e3f71e3ec1545c54eb0
+  eycap-memcached
+    git: git://github.com/engineyard/eycap-memcached.git
+    revision: ecc34850910e9b9f65758012d09f9d43f0266611
+  eycap-mongo
+    git: git://github.com/engineyard/eycap-mongo.git
+    revision: 944136791794380928efbedabd02856f6e22fa8d
+  eycap-monit
+    git: git://github.com/engineyard/eycap-monit.git
+    revision: afff931828ec7934da80e5037eddd1edeca0cbd1
+  eycap-monit_configs
+    git: git://github.com/engineyard/eycap-monit_configs.git
+    revision: 3c7e8c98eb4c2096742cb81b2ad69d02e6c22e65
+  eycap-nginx
+    git: git://github.com/engineyard/eycap-nginx.git
+    revision: 949ee36068b52b1599bd1057aec5d62d2714fcd8
+  eycap-rails_gem_dependencies
+    git: git://github.com/engineyard/eycap-rails_gem_dependencies.git
+    revision: 7771454d661e0510dec1a22e1fbc5e02db3678e5
+  eycap-redis
+    git: git://github.com/engineyard/eycap-redis.git
+    revision: 89f4f1d8075b6f79710bf624e5b7368b44f71e72
+  mysql
+    git: git://github.com/opscode-cookbooks/mysql.git
+    revision: 7d07e0eb78f07fc66343893df29a6c3388ab4a2d
+  postgresql
+    git: git://github.com/opscode-cookbooks/postgresql.git
+    revision: 81300d5474bd454ba076a4330192b115bdd2c579
+  rbenv
+    git: git://github.com/fnichol/chef-rbenv.git
+    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
+  sudo
+    git: git://github.com/opscode-cookbooks/sudo.git
+    revision: cbd703cac77b7900674131441a22323f7d88d1c7
+  users
+    git: git://github.com/opscode-cookbooks/users.git
+    revision: fca9a42ab44dadbb98432c931dfc6c049ecc23ce
 
 GRAPH
+  apt (2.6.0)
   build-essential (2.0.6)
+  chef-solo-search (0.5.1)
+  chef-sugar (2.3.2)
+  eycap-basic_security (0.0.2)
+  eycap-look_and_feel (0.0.4)
+    locales (>= 0.0.0)
+  eycap-memcached (0.0.2)
+  eycap-mongo (0.0.4)
+  eycap-monit (0.3.8)
+  eycap-monit_configs (0.1.1)
+  eycap-nginx (0.0.4)
+  eycap-rails_gem_dependencies (0.0.3)
+    apt (>= 0.0.0)
+  eycap-redis (0.0.6)
+  java (1.28.0)
+  locales (0.3.1)
+  mysql (5.5.4)
+    yum-mysql-community (>= 0.0.0)
+  openssl (2.0.0)
+    chef-sugar (>= 0.0.0)
+  postgresql (3.4.10)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
+  rbenv (0.7.3)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  ruby_build (0.8.0)
+  sudo (2.7.1)
+  users (1.7.1)
+  yum (3.3.2)
+  yum-mysql-community (0.1.10)
+    yum (>= 3.0)
