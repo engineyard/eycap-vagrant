@@ -76,10 +76,21 @@ openssl passwd -1 "plaintextpassword"
 Then put your password in the JSON attribute for password:
 
 ```
-"password": "",
+"password": "$1$NqxiOhd8$U86GLy0BjTiFlRTiQBd2//",
+```
+
+Copy your public key and put it in the "ssh keys" hash 
+
+```
+cat ~/.ssh/id_rsa.pub
 ```
 
 The ssh_keys goes in a double quoted string: ``""``.
+
+```
+  "ssh_keys": [ "ssh-rsa DDDDD3NzaC1yc2EAAAABIwAAAQEAuF/7aXnyBwYX6IiInJ7M1m+426HDLiCeHQYlvWvyFJ4mQRohnen1knnwERMjvxJcizn0p28wWl++h33bgMvbaDV6orzatkg1sZ4z473DOItGWLoZ97CC6erAvvjQR5qvEcZXBFzT6Bv1FXLBzwfiRBek8MSDVyCCcahc74qaqbbNBAMhKrHBRbl6/EfhRgjHrujXa1AvVG1pKH2EMDXBmdTFLj9Dab23yH/8QxMzZq8TfCfRtWLKH3epcpvX1r1lieSKTVvQGwf0F9FLWqmELV6oND+K5yLL1vKDSNz0I+M+IVQGnGb2W2Iu5rEQ0FOiZhRrmbxl3Lp9fzMCgplbiDQ== key@example.local"
+  ],
+```
 
 ### Prepare chef
 
